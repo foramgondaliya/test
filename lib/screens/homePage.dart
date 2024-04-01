@@ -18,20 +18,22 @@ class _homePageState extends State<homePage> {
           "HomePage",
           style: TextStyle(
             fontSize: 30,
+            fontWeight: FontWeight.bold
           ),
         ),
-        centerTitle: true,
       ),
       body: Column(
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Container(
+              height: 300,
+            width: 370,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                    "https://img.freepik.com/premium-photo/beautiful-young-woman-white-clothes-isolated-white-background_1142-31798.jpg?w=740",
-                  ),
+                    "https://m.media-amazon.com/images/I/61FVEqUK9qL._SX679_.jpg",
+                  )
                 )
               ),
           ),),
@@ -46,7 +48,7 @@ class _homePageState extends State<homePage> {
                     width: 395,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.grey.shade400,
+                      color: Colors.grey.shade300,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(left: 30),
@@ -61,6 +63,7 @@ class _homePageState extends State<homePage> {
                             child: Text("Search Your Choice...",
                               style: TextStyle(
                                 fontSize: 20,
+                                color: Colors.grey.shade800,
                               ),
                             ),
                           ),

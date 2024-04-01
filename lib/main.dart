@@ -12,7 +12,7 @@ void main() {
       routes: {
         '/':(context)=>homePage(),
         'details' : (context) => detail(),
-        //'cart' : (context) => cartPage(),
+        'cart' : (context) => cartPage(),
       },
     ),
   );

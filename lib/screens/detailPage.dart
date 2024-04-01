@@ -22,11 +22,7 @@ class _detailState extends State<detail> {
             padding: EdgeInsets.only(right: 20),
             child: GestureDetector(
               onTap: (){
-                ProductData.favData.add(data);
-                ProductData.convertData();
-                setState(() {
-                  isLiked = !isLiked;
-                });
+                Navigator.of(context).pushNamed('cart',arguments: data);
               },
               child: Icon(
                 Icons.shopping_cart
@@ -157,28 +153,36 @@ class _detailState extends State<detail> {
                 ),
                 Expanded(
                     flex: 2,
-                      child: Container(
-                        child:Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 360,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.purple.shade300,
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(
-                                  "Add To Cart",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 23,
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            ProductData.cartData.add(data);
+                            ProductData.convertUniiqueData();
+                          });
+                        },
+                        child: Container(
+                          child:Padding(
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 70,
+                                  width: 360,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.purple.shade300,
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    "Add To Cart",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 23,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

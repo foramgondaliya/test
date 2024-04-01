@@ -3,9 +3,6 @@ class ProductData {
   static Set<Map<String, dynamic>> cartData = {};
   static List<Map<String, dynamic>> cartProductData = [];
 
-  static Set<Map<String, dynamic>> favData = {};
-  static List<Map<String, dynamic>> favProductData = [];
-
   static List<Map<String, dynamic>> allProductsData = <Map<String, dynamic>>
   [
     {
@@ -24,6 +21,8 @@ class ProductData {
           "thumbnail": "https://m.media-amazon.com/images/I/61+tm-W10+L._SY695_.jpg",
           "image": [
             "https://m.media-amazon.com/images/I/61+tm-W10+L._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/714njj560iL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/71xrm-EaqRL._SY695_.jpg",
           ]
         },
         {
@@ -44,6 +43,9 @@ class ProductData {
           "like": true,
           "thumbnail": "https://m.media-amazon.com/images/I/71Raw8VUk5L._SY695_.jpg",
           "image": [
+            "https://m.media-amazon.com/images/I/812PW5xIGQL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/81rRwB4TQkL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/71D7aOcFvXL._SY695_.jpg",
           ]
         },
       ],
@@ -188,9 +190,6 @@ class ProductData {
     cartProductData = cartData.toList();
   }
 
-  static void convertData() {
-    favProductData = favData.toList();
-  }
   static num totalPrice() {
     num sum = 0.0;
     for (var element in cartProductData) {
