@@ -116,35 +116,36 @@ class cartPageState extends State<cartPage> {
             ),
           ),
           Expanded(
-              flex: 1,
-              child: Container(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 25),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 60,
-                        width: 360,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.purple.shade300,
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Place Order",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 23,
-                          ),
-                        ),
-                      ),
-                    ],
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Total Price",
+                    style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                    ),
                   ),
-                ),
-              )),
+                  Text("\$ ${ProductData.totalPrice()}",
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              color: Colors.purple.shade300,
+            ),
+          ),
         ],
       ),
     );
   }
 }
+
+
+
